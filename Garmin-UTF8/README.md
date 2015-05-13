@@ -1,18 +1,18 @@
 # Garmin-UTF8
 A library for Garmins to handle UTF-8 strings.
 
-## Purpose
+### Purpose
 This library provides functions on Garmins to convert UTF-8 strings into 
 Latin 8859-1 strings, which could displayed on the player. This library works
 only on Garmins. All other players could handle UTF-8 strings without any 
 conversion.
 
-## Installation
+### Installation
 The code of this library should be placed in the author script or imported by 
 a 'require "Garmin-UTF8"' (Urwigo). You don't have to call any function so 
 that the conversion take place.
 
-## Explanation
+### Explanation
 Garmins use Latin 8859-1 as characterset for Wherigos. All other players use 
 UTF-8. To use special characters like äöüß, strings have to be converted from 
 UTF-8 to Latin 8859-1. If strings entered with a input field, than this have 
@@ -32,8 +32,12 @@ replaced by the original UTF-8 string. Text inputs are converted from Latin
 MessageBox and Dialog are converted on the fly, so that there are all strings 
 and buttons in Latin 8859-1. The same for LogMessage. 
 
-## Further improvements  
+### Further improvements  
 The library creates also workarounds for the ZTimer, the ZInput and the 
 ShowScreen bugs of Garmins. If you use allready the Workarounds library, it 
 isn't a problem, If this library detects the Workaround library, nothing is 
 done.
+
+### Author
+- Charlenni (Wherigo Foundation))
+- sTeamTran (Function for convertig UTF-8 into Latin 8859-1, Wherigo Foundation)
