@@ -4,12 +4,12 @@
 if WIGInternal ~= nil then
   if not WIGInternal.Corrected then
     -- Workaround for crash of ZInput when replaced by other screen
-    Wherigo.GetInput = function (inputObj)
-      if not Wherigo.ZInput:made(inputObj) then
-        error("GetInput requires a ZInput object as a parameter", 2)
+    Wherigo.ZInput.GetInput = function (self, input)
+      local inputString = input or "<cancelled>"
+      Wherigo.LogMessage("ZInput:GetInput - " .. self.Name .. " -> " .. inputString)
+      if type(self["OnGetInput"]) == "function" and input ~= nil then
+        pcall(self["OnGetInput"], self, input)
       end
-      Wherigo.LogMessage("GetInput - " .. inputObj.Name)
-      return pcall(WIGInternal.GetInput, inputObj)
     end
     -- Workaround for stopping ZTimer in OnTick
     Wherigo.ZTimer.Tick = function (self)

@@ -40,7 +40,7 @@
 <System:DateTime>04/27/2015 13:24:31</System:DateTime>
 </CreateDate>
 <UpdateDate>
-<System:DateTime>05/13/2015 14:42:23</System:DateTime>
+<System:DateTime>05/15/2015 16:38:37</System:DateTime>
 </UpdateDate>
 <Complete>
 <System:Boolean>False</System:Boolean>
@@ -1209,21 +1209,18 @@
 </Actions:GlobalEventAction>
 </GlobalZoneActiveChangedAction>
 <UserDirectives>
-<System:String xsi:nil="true" />
-</UserDirectives>
-<UserFunctions>
 <System:String>-- Library for Garmins and Emulator to handle some bugs
 -- Copyright by Wherigo Foundation, Charlenni
 -- Version 0.9.1
 if WIGInternal ~= nil then
   if not WIGInternal.Corrected then
     -- Workaround for crash of ZInput when replaced by other screen
-    Wherigo.GetInput = function (inputObj)
-      if not Wherigo.ZInput:made(inputObj) then
-        error("GetInput requires a ZInput object as a parameter", 2)
+    Wherigo.ZInput.GetInput = function (self, input)
+      local inputString = input or "&lt;cancelled&gt;"
+      Wherigo.LogMessage("ZInput:GetInput - " .. self.Name .. " -&gt; " .. inputString)
+      if type(self["OnGetInput"]) == "function" and input ~= nil then
+        pcall(self["OnGetInput"], self, input)
       end
-      Wherigo.LogMessage("GetInput - " .. inputObj.Name)
-      return pcall(WIGInternal.GetInput, inputObj)
     end
     -- Workaround for stopping ZTimer in OnTick
     Wherigo.ZTimer.Tick = function (self)
@@ -1281,5 +1278,8 @@ if WIGInternal ~= nil then
   end
 end
 </System:String>
+</UserDirectives>
+<UserFunctions>
+<System:String></System:String>
 </UserFunctions>
 </Wherigo:WigoCartridge>

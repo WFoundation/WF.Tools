@@ -38,6 +38,6 @@ ShowScreen bugs of Garmins. If you use allready the Workarounds library, it
 isn't a problem, If this library detects the Workaround library, nothing is 
 done.
 
-### Author
+### Authors
 - Charlenni (Wherigo Foundation))
 - sTeamTran (Function for convertig UTF-8 into Latin 8859-1, Wherigo Foundation)
