@@ -11,7 +11,8 @@ The code of this library should be placed directly after the 'require "Wherigo"'
 in the cartridge Lua file, but it must place before any creation of objects.
 Normally this is only possible by builder authors or authors, who write 
 cartridges "by hand" without a build. You don't need to call any function so 
-that the workaround take place.
+that the workaround take place. If you use Urwigo, you could place the code 
+into the "Lua user directives".
 
 ### Removed bugs
 
