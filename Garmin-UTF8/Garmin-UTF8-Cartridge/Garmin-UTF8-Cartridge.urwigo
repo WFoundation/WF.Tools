@@ -40,7 +40,7 @@
 <System:DateTime>04/27/2015 13:24:31</System:DateTime>
 </CreateDate>
 <UpdateDate>
-<System:DateTime>05/13/2015 15:03:52</System:DateTime>
+<System:DateTime>06/17/2015 15:06:02</System:DateTime>
 </UpdateDate>
 <Complete>
 <System:Boolean>False</System:Boolean>
@@ -2143,7 +2143,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <UserFunctions>
 <System:String>-- Library for Garmins to handle special characters and some bugs
 -- Copyright by Wherigo Foundation, Charlenni
--- Version 0.9.4
+-- Version 0.9.5
 
 -- HowTo
 --
@@ -2231,6 +2231,10 @@ Garmin.InitFramework = function ()
   Wherigo.Dialog = Garmin.Dialog
   Wherigo.GetInput = Garmin.GetInput
   Wherigo.LogMessage = Garmin.LogMessage
+  -- Add a missing rawget
+  rawget = function (obj, prop)
+    return obj:rawget(prop)
+  end
 end
 
 -- Init all settings for existing and new ZObjects

@@ -21,8 +21,8 @@ to be converted back.
 The library replaces at startup all getters for Names, Descriptions and 
 Command.Texts, so that they return always Latin 8859-1. That's because the 
 Garmin use this functions to get the strings. If you want the original string,
-you have to use the rawget() function of the object. Use it as 
-'item:rawget("Name")' for object 'item' and property 'Name'.
+you have to use the rawget() function. Use it as 'rawget(item, "Name")' for 
+object 'item' and property 'Name'.
 
 All Choices for multiple choice inputs are converted to Latin 8859-1 when you 
 call the input. Original strings are saved and if the user selects one, it is 

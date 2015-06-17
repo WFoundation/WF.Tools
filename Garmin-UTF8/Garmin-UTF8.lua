@@ -1,6 +1,6 @@
 -- Library for Garmins to handle special characters and some bugs
 -- Copyright by Wherigo Foundation, Charlenni
--- Version 0.9.4
+-- Version 0.9.5
 
 -- HowTo
 --
@@ -88,6 +88,10 @@ Garmin.InitFramework = function ()
   Wherigo.Dialog = Garmin.Dialog
   Wherigo.GetInput = Garmin.GetInput
   Wherigo.LogMessage = Garmin.LogMessage
+  -- Add a missing rawget
+  rawget = function (obj, prop)
+    return obj:rawget(prop)
+  end
 end
 
 -- Init all settings for existing and new ZObjects
