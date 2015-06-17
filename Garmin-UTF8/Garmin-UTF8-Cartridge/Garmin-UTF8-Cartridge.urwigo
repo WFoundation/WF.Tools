@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Wherigo:WigoCartridge xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Wherigo="clr-namespace:YourSelf.Urwigo.Wherigo;assembly=Urwigo" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:Actions="clr-namespace:YourSelf.Urwigo.Wherigo.Actions;assembly=Urwigo" key="key24">
+<Wherigo:WigoCartridge xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Wherigo="clr-namespace:YourSelf.Urwigo.Wherigo;assembly=Urwigo" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:Actions="clr-namespace:YourSelf.Urwigo.Wherigo.Actions;assembly=Urwigo" key="key26">
 <Identifier>
 <System:String>cartGarminUTF8</System:String>
 </Identifier>
@@ -40,7 +40,7 @@
 <System:DateTime>04/27/2015 13:24:31</System:DateTime>
 </CreateDate>
 <UpdateDate>
-<System:DateTime>06/17/2015 15:06:02</System:DateTime>
+<System:DateTime>06/17/2015 20:24:22</System:DateTime>
 </UpdateDate>
 <Complete>
 <System:Boolean>False</System:Boolean>
@@ -1906,6 +1906,123 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 </Opened>
 </Wherigo:WigoItem>
 </Items>
+<Items>
+<Wherigo:WigoItem key="key23">
+<Identifier>
+<System:String xsi:nil="true" />
+</Identifier>
+<Name>
+<System:String>rawget</System:String>
+</Name>
+<Description>
+<System:String xsi:nil="true" />
+</Description>
+<Visible>
+<System:Boolean>True</System:Boolean>
+</Visible>
+<Image>
+<Wherigo:WigoMedia xsi:nil="true" />
+</Image>
+<Icon>
+<Wherigo:WigoMedia xsi:nil="true" />
+</Icon>
+<ObjectLocation>
+<Wherigo:WigoObjectLocation>
+<Container>
+<Wherigo:WigoPlayer xsi:nil="true" ref="key4" />
+</Container>
+<Location>
+<Wherigo:WigoCoordinate xsi:nil="true" />
+</Location>
+</Wherigo:WigoObjectLocation>
+</ObjectLocation>
+<Commands>
+<Wherigo:WigoCommand key="key24">
+<Identifier>
+<System:String xsi:nil="true" />
+</Identifier>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+<Name>
+<System:String>Check</System:String>
+</Name>
+<EmptyTargetListText>
+<System:String>Nothing available</System:String>
+</EmptyTargetListText>
+<Targets>
+<Wherigo:WigoCommandTargets>None</Wherigo:WigoCommandTargets>
+</Targets>
+<ExecuteAction>
+<Actions:EventAction>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+<Actions>
+<Actions:SnippetAction>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+<Value>
+<System:String>var = Wherigo.Get(zitemTest, "Name");</System:String>
+</Value>
+</Actions:SnippetAction>
+</Actions>
+<Actions>
+<Actions:SetAction>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+<LeftContent>
+<Actions:ObjectPropertyReferenceExpressionAction>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+<Target>
+<Wherigo:WigoItem xsi:nil="true" ref="key23" />
+</Target>
+<Property>
+<System:String>Description</System:String>
+</Property>
+</Actions:ObjectPropertyReferenceExpressionAction>
+</LeftContent>
+<RightContent>
+<Actions:ValueExpressionAction>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+<Value>
+<System:String>rawget checked</System:String>
+</Value>
+</Actions:ValueExpressionAction>
+</RightContent>
+</Actions:SetAction>
+</Actions>
+<Owner>
+<Wherigo:WigoCommand xsi:nil="true" ref="key24" />
+</Owner>
+</Actions:EventAction>
+</ExecuteAction>
+</Wherigo:WigoCommand>
+</Commands>
+<ClickAction>
+<Actions:EventAction>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+<Owner>
+<Wherigo:WigoItem xsi:nil="true" ref="key23" />
+</Owner>
+</Actions:EventAction>
+</ClickAction>
+<Locked>
+<System:Boolean>False</System:Boolean>
+</Locked>
+<Opened>
+<System:Boolean>False</System:Boolean>
+</Opened>
+</Wherigo:WigoItem>
+</Items>
 <Variables>
 <Wherigo:WigoVariable xsi:nil="true" ref="key14" />
 </Variables>
@@ -1913,7 +2030,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <Wherigo:WigoVariable xsi:nil="true" ref="key15" />
 </Variables>
 <Tasks>
-<Wherigo:WigoTask key="key23">
+<Wherigo:WigoTask key="key25">
 <Identifier>
 <System:String xsi:nil="true" />
 </Identifier>
@@ -1947,7 +2064,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoTask xsi:nil="true" ref="key23" />
+<Wherigo:WigoTask xsi:nil="true" ref="key25" />
 </Owner>
 </Actions:EventAction>
 </ActiveChangedAction>
@@ -1957,7 +2074,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoTask xsi:nil="true" ref="key23" />
+<Wherigo:WigoTask xsi:nil="true" ref="key25" />
 </Owner>
 </Actions:EventAction>
 </CompleteChangedAction>
@@ -1967,7 +2084,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoTask xsi:nil="true" ref="key23" />
+<Wherigo:WigoTask xsi:nil="true" ref="key25" />
 </Owner>
 </Actions:EventAction>
 </CorrectStateChangedAction>
@@ -1977,7 +2094,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoTask xsi:nil="true" ref="key23" />
+<Wherigo:WigoTask xsi:nil="true" ref="key25" />
 </Owner>
 </Actions:EventAction>
 </ClickAction>
@@ -2053,7 +2170,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoCartridge xsi:nil="true" ref="key24" />
+<Wherigo:WigoCartridge xsi:nil="true" ref="key26" />
 </Owner>
 </Actions:EventAction>
 </StartAction>
@@ -2063,7 +2180,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoCartridge xsi:nil="true" ref="key24" />
+<Wherigo:WigoCartridge xsi:nil="true" ref="key26" />
 </Owner>
 </Actions:EventAction>
 </EndAction>
@@ -2073,7 +2190,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoCartridge xsi:nil="true" ref="key24" />
+<Wherigo:WigoCartridge xsi:nil="true" ref="key26" />
 </Owner>
 </Actions:EventAction>
 </ResumeAction>
@@ -2083,7 +2200,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoCartridge xsi:nil="true" ref="key24" />
+<Wherigo:WigoCartridge xsi:nil="true" ref="key26" />
 </Owner>
 </Actions:EventAction>
 </SaveAction>
@@ -2093,7 +2210,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoCartridge xsi:nil="true" ref="key24" />
+<Wherigo:WigoCartridge xsi:nil="true" ref="key26" />
 </Owner>
 </Actions:GlobalEventAction>
 </GlobalZoneEnterAction>
@@ -2103,7 +2220,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoCartridge xsi:nil="true" ref="key24" />
+<Wherigo:WigoCartridge xsi:nil="true" ref="key26" />
 </Owner>
 </Actions:GlobalEventAction>
 </GlobalZoneExitAction>
@@ -2113,7 +2230,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoCartridge xsi:nil="true" ref="key24" />
+<Wherigo:WigoCartridge xsi:nil="true" ref="key26" />
 </Owner>
 </Actions:GlobalEventAction>
 </GlobalZoneDistantAction>
@@ -2123,7 +2240,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoCartridge xsi:nil="true" ref="key24" />
+<Wherigo:WigoCartridge xsi:nil="true" ref="key26" />
 </Owner>
 </Actions:GlobalEventAction>
 </GlobalZoneProximityAction>
@@ -2133,7 +2250,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoCartridge xsi:nil="true" ref="key24" />
+<Wherigo:WigoCartridge xsi:nil="true" ref="key26" />
 </Owner>
 </Actions:GlobalEventAction>
 </GlobalZoneActiveChangedAction>
@@ -2231,9 +2348,9 @@ Garmin.InitFramework = function ()
   Wherigo.Dialog = Garmin.Dialog
   Wherigo.GetInput = Garmin.GetInput
   Wherigo.LogMessage = Garmin.LogMessage
-  -- Add a missing rawget
+  -- Replace bugy rawget function
   rawget = function (obj, prop)
-    return obj:rawget(prop)
+    return obj.rawget(obj, prop)
   end
 end
 
@@ -2554,6 +2671,14 @@ Garmin.GetCartridgeObject().OnStart = function (self)
   Garmin.Init()
   Garmin.OrgOnStart(self)  
 end
-</System:String>
+
+-- Add a missing rawget
+Wherigo.Get = function (obj, prop)
+  if string.sub(Env.Platform, 1, 6) == "Vendor" then
+    return obj.rawget(obj, prop)
+  else
+    return obj[prop]
+  end
+end</System:String>
 </UserFunctions>
 </Wherigo:WigoCartridge>

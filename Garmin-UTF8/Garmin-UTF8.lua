@@ -88,9 +88,9 @@ Garmin.InitFramework = function ()
   Wherigo.Dialog = Garmin.Dialog
   Wherigo.GetInput = Garmin.GetInput
   Wherigo.LogMessage = Garmin.LogMessage
-  -- Add a missing rawget
+  -- Replace bugy rawget function
   rawget = function (obj, prop)
-    return obj:rawget(prop)
+    return obj.rawget(obj, prop)
   end
 end
 
@@ -410,4 +410,13 @@ Garmin.OrgOnStart = Garmin.GetCartridgeObject().OnStart
 Garmin.GetCartridgeObject().OnStart = function (self)
   Garmin.Init()
   Garmin.OrgOnStart(self)  
+end
+
+-- Add a missing rawget
+Wherigo.Get = function (obj, prop)
+  if string.sub(Env.Platform, 1, 6) == "Vendor" then
+    return obj.rawget(obj, prop)
+  else
+    return obj[prop]
+  end
 end
