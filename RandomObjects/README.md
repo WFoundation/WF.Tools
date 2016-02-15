@@ -22,38 +22,52 @@ where itemHammer and so on are the variable names of the items. You could now
 access each entry with a "tabRandom[1]", "tabRandom[2]" and so on. Which is 
 the normal way to access table entries.
 
+### Usage
+
+#### GetNext() and GetNextWithRemove()
 If you want a random entry, than you get this by
 ```lua
 entry = tabRandom:GetNext()
 entry = tabRandom:GetNextWithRemove()
 ```
 The difference between both functions is, that the later one removes the 
-entry from the table, so that is one entry smaller. I stored the returned 
-entry in the variable "entry". If you don't do this, you could use
+entry from the table, so that is one entry smaller. 
+
+#### Last
+I stored the returned in the above example the returned entry in the variable 
+"entry". If you don't do this, you could use
 ```lua
 tabRandom:Last
 ```
 to access the last returned entry from the table.
 
-Additional functions are:
+#### IsNext()
+To test, if there is one or more entries left in the table, you could use
 ```lua
 tabRandom:IsNext()
 ```
-It returns "true", if there is an entry left or "false" if there is no entry.
+It returns "true", if there is one or more entries left or "false" if the tabel
+is empty.
 
+#### Add()
+To add an new entry to the table, you could use  
 ```lua
 tabRandom:Add(entry)
-```Adds an entry to the list.
+```
+which adds an entry to the table, but not to the original values.
 
+#### Remove()
+To remove an entry by hand from the table use
 ```lua
 tabRandom:Remove(entry)
 ```
-Removes an entry from the list if it exists.
 
+#### Reset()
+To restore the original entries of the table, which you have set by the call 
+of RandomObjects(), you could use
 ```lua
 tabRandom:Reset()
 ```
-Restores all entries of the original table (entries you set with the RandomObjects function).
 
 ### Authors
 - Charlenni (Wherigo Foundation))
