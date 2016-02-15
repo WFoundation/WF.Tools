@@ -137,6 +137,10 @@ Garmin.MessageBox = function (arg1, arg2, arg3, arg4)
   if arg1 ~= nil and type(arg1) == "table" then
     -- MessageBox call with table
     arg1.Text = Garmin.UTF8ToLatin(arg1.Text)
+    -- Cave! Garmins have only around 800 characters for MessageBoxes
+    if string.len(arg1.Text) > 800 then
+      arg1.Text = string.sub(arg1.Text, 1, 796) .. " ..."
+    end
     if arg1.Buttons ~= nil and arg1.Buttons[1] ~= nil then
       arg1.Buttons[1] = Garmin.UTF8ToLatin(arg1.Buttons[1])
     end
@@ -147,6 +151,10 @@ Garmin.MessageBox = function (arg1, arg2, arg3, arg4)
   else
     -- MessageBox with discrete arguments
     arg1 = Garmin.UTF8ToLatin(arg1)
+    -- Cave! Garmins have only around 800 characters for MessageBoxes
+    if string.len(arg1) > 800 then
+      arg1 = string.sub(arg1, 1, 796) .. " ..."
+    end
     if type(arg3) == "table" then
       arg3[1] = Garmin.UTF8ToLatin(arg3[1])
       arg3[2] = Garmin.UTF8ToLatin(arg3[2])
@@ -160,6 +168,10 @@ Garmin.Dialog = function (tbl)
   for k, v in ipairs(tbl) do
     if v.Text ~= nil then
       v.Text = Garmin.UTF8ToLatin(v.Text)
+      -- Cave! Garmins have only around 800 characters for Dialogs
+      if string.len(v.Text) > 800 then
+        v.Text = string.sub(v.Text, 1, 796) .. " ..."
+      end
     end
   end
   Garmin.OrgDialog(tbl)

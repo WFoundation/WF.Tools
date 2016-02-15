@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Wherigo:WigoCartridge xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Wherigo="clr-namespace:YourSelf.Urwigo.Wherigo;assembly=Urwigo" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:Actions="clr-namespace:YourSelf.Urwigo.Wherigo.Actions;assembly=Urwigo" key="key26">
+<Wherigo:WigoCartridge xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Wherigo="clr-namespace:YourSelf.Urwigo.Wherigo;assembly=Urwigo" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:Actions="clr-namespace:YourSelf.Urwigo.Wherigo.Actions;assembly=Urwigo" key="key30">
 <Identifier>
 <System:String>cartGarminUTF8</System:String>
 </Identifier>
@@ -40,7 +40,7 @@
 <System:DateTime>04/27/2015 13:24:31</System:DateTime>
 </CreateDate>
 <UpdateDate>
-<System:DateTime>06/17/2015 20:24:22</System:DateTime>
+<System:DateTime>11/17/2015 20:47:40</System:DateTime>
 </UpdateDate>
 <Complete>
 <System:Boolean>False</System:Boolean>
@@ -2023,6 +2023,236 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 </Opened>
 </Wherigo:WigoItem>
 </Items>
+<Items>
+<Wherigo:WigoItem key="key26">
+<Identifier>
+<System:String xsi:nil="true" />
+</Identifier>
+<Name>
+<System:String>MessageBox crash</System:String>
+</Name>
+<Description>
+<System:String>Test for the MessageBox crash on Garmins. A MessageBox with more than 800 characters is shown.</System:String>
+</Description>
+<Visible>
+<System:Boolean>True</System:Boolean>
+</Visible>
+<Image>
+<Wherigo:WigoMedia xsi:nil="true" />
+</Image>
+<Icon>
+<Wherigo:WigoMedia xsi:nil="true" />
+</Icon>
+<ObjectLocation>
+<Wherigo:WigoObjectLocation>
+<Container>
+<Wherigo:WigoPlayer xsi:nil="true" ref="key4" />
+</Container>
+<Location>
+<Wherigo:WigoCoordinate xsi:nil="true" />
+</Location>
+</Wherigo:WigoObjectLocation>
+</ObjectLocation>
+<Commands>
+<Wherigo:WigoCommand key="key25">
+<Identifier>
+<System:String xsi:nil="true" />
+</Identifier>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+<Name>
+<System:String>Show</System:String>
+</Name>
+<EmptyTargetListText>
+<System:String>Nicht verfügbar</System:String>
+</EmptyTargetListText>
+<Targets>
+<Wherigo:WigoCommandTargets>None</Wherigo:WigoCommandTargets>
+</Targets>
+<ExecuteAction>
+<Actions:EventAction>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+<Actions>
+<Actions:MessageBoxAction>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+<Text>
+<Actions:ValueExpressionAction>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+<Value>
+<System:String>This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really lo</System:String>
+</Value>
+</Actions:ValueExpressionAction>
+</Text>
+<Media>
+<Wherigo:WigoMedia xsi:nil="true" />
+</Media>
+<Button1Text>
+<System:String xsi:nil="true" />
+</Button1Text>
+<Button2Text>
+<System:String xsi:nil="true" />
+</Button2Text>
+<ButtonClickedAction>
+<Actions:DoAction>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+</Actions:DoAction>
+</ButtonClickedAction>
+</Actions:MessageBoxAction>
+</Actions>
+<Owner>
+<Wherigo:WigoCommand xsi:nil="true" ref="key25" />
+</Owner>
+</Actions:EventAction>
+</ExecuteAction>
+</Wherigo:WigoCommand>
+</Commands>
+<ClickAction>
+<Actions:EventAction>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+<Owner>
+<Wherigo:WigoItem xsi:nil="true" ref="key26" />
+</Owner>
+</Actions:EventAction>
+</ClickAction>
+<Locked>
+<System:Boolean>False</System:Boolean>
+</Locked>
+<Opened>
+<System:Boolean>False</System:Boolean>
+</Opened>
+</Wherigo:WigoItem>
+</Items>
+<Items>
+<Wherigo:WigoItem key="key28">
+<Identifier>
+<System:String xsi:nil="true" />
+</Identifier>
+<Name>
+<System:String>Dialog crash</System:String>
+</Name>
+<Description>
+<System:String>Test for the Dialog crash on Garmins. A Dialog with more than 800 characters is shown.</System:String>
+</Description>
+<Visible>
+<System:Boolean>True</System:Boolean>
+</Visible>
+<Image>
+<Wherigo:WigoMedia xsi:nil="true" />
+</Image>
+<Icon>
+<Wherigo:WigoMedia xsi:nil="true" />
+</Icon>
+<ObjectLocation>
+<Wherigo:WigoObjectLocation>
+<Container>
+<Wherigo:WigoPlayer xsi:nil="true" ref="key4" />
+</Container>
+<Location>
+<Wherigo:WigoCoordinate xsi:nil="true" />
+</Location>
+</Wherigo:WigoObjectLocation>
+</ObjectLocation>
+<Commands>
+<Wherigo:WigoCommand key="key27">
+<Identifier>
+<System:String xsi:nil="true" />
+</Identifier>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+<Name>
+<System:String>Show</System:String>
+</Name>
+<EmptyTargetListText>
+<System:String>Nicht verfügbar</System:String>
+</EmptyTargetListText>
+<Targets>
+<Wherigo:WigoCommandTargets>None</Wherigo:WigoCommandTargets>
+</Targets>
+<ExecuteAction>
+<Actions:EventAction>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+<Actions>
+<Actions:DialogAction>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+<Actions>
+<Actions:DialogEntryAction>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+<Text>
+<Actions:ValueExpressionAction>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+<Value>
+<System:String>This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really lo</System:String>
+</Value>
+</Actions:ValueExpressionAction>
+</Text>
+<Media>
+<Wherigo:WigoMedia xsi:nil="true" />
+</Media>
+</Actions:DialogEntryAction>
+</Actions>
+<Button1Text>
+<System:String xsi:nil="true" />
+</Button1Text>
+<Button2Text>
+<System:String xsi:nil="true" />
+</Button2Text>
+<ButtonClickedAction>
+<Actions:DoAction>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+</Actions:DoAction>
+</ButtonClickedAction>
+<Buffered>
+<System:Boolean>False</System:Boolean>
+</Buffered>
+</Actions:DialogAction>
+</Actions>
+<Owner>
+<Wherigo:WigoCommand xsi:nil="true" ref="key27" />
+</Owner>
+</Actions:EventAction>
+</ExecuteAction>
+</Wherigo:WigoCommand>
+</Commands>
+<ClickAction>
+<Actions:EventAction>
+<Enabled>
+<System:Boolean>True</System:Boolean>
+</Enabled>
+<Owner>
+<Wherigo:WigoItem xsi:nil="true" ref="key28" />
+</Owner>
+</Actions:EventAction>
+</ClickAction>
+<Locked>
+<System:Boolean>False</System:Boolean>
+</Locked>
+<Opened>
+<System:Boolean>False</System:Boolean>
+</Opened>
+</Wherigo:WigoItem>
+</Items>
 <Variables>
 <Wherigo:WigoVariable xsi:nil="true" ref="key14" />
 </Variables>
@@ -2030,7 +2260,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <Wherigo:WigoVariable xsi:nil="true" ref="key15" />
 </Variables>
 <Tasks>
-<Wherigo:WigoTask key="key25">
+<Wherigo:WigoTask key="key29">
 <Identifier>
 <System:String xsi:nil="true" />
 </Identifier>
@@ -2064,7 +2294,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoTask xsi:nil="true" ref="key25" />
+<Wherigo:WigoTask xsi:nil="true" ref="key29" />
 </Owner>
 </Actions:EventAction>
 </ActiveChangedAction>
@@ -2074,7 +2304,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoTask xsi:nil="true" ref="key25" />
+<Wherigo:WigoTask xsi:nil="true" ref="key29" />
 </Owner>
 </Actions:EventAction>
 </CompleteChangedAction>
@@ -2084,7 +2314,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoTask xsi:nil="true" ref="key25" />
+<Wherigo:WigoTask xsi:nil="true" ref="key29" />
 </Owner>
 </Actions:EventAction>
 </CorrectStateChangedAction>
@@ -2094,7 +2324,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoTask xsi:nil="true" ref="key25" />
+<Wherigo:WigoTask xsi:nil="true" ref="key29" />
 </Owner>
 </Actions:EventAction>
 </ClickAction>
@@ -2170,7 +2400,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoCartridge xsi:nil="true" ref="key26" />
+<Wherigo:WigoCartridge xsi:nil="true" ref="key30" />
 </Owner>
 </Actions:EventAction>
 </StartAction>
@@ -2180,7 +2410,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoCartridge xsi:nil="true" ref="key26" />
+<Wherigo:WigoCartridge xsi:nil="true" ref="key30" />
 </Owner>
 </Actions:EventAction>
 </EndAction>
@@ -2190,7 +2420,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoCartridge xsi:nil="true" ref="key26" />
+<Wherigo:WigoCartridge xsi:nil="true" ref="key30" />
 </Owner>
 </Actions:EventAction>
 </ResumeAction>
@@ -2200,7 +2430,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoCartridge xsi:nil="true" ref="key26" />
+<Wherigo:WigoCartridge xsi:nil="true" ref="key30" />
 </Owner>
 </Actions:EventAction>
 </SaveAction>
@@ -2210,7 +2440,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoCartridge xsi:nil="true" ref="key26" />
+<Wherigo:WigoCartridge xsi:nil="true" ref="key30" />
 </Owner>
 </Actions:GlobalEventAction>
 </GlobalZoneEnterAction>
@@ -2220,7 +2450,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoCartridge xsi:nil="true" ref="key26" />
+<Wherigo:WigoCartridge xsi:nil="true" ref="key30" />
 </Owner>
 </Actions:GlobalEventAction>
 </GlobalZoneExitAction>
@@ -2230,7 +2460,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoCartridge xsi:nil="true" ref="key26" />
+<Wherigo:WigoCartridge xsi:nil="true" ref="key30" />
 </Owner>
 </Actions:GlobalEventAction>
 </GlobalZoneDistantAction>
@@ -2240,7 +2470,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoCartridge xsi:nil="true" ref="key26" />
+<Wherigo:WigoCartridge xsi:nil="true" ref="key30" />
 </Owner>
 </Actions:GlobalEventAction>
 </GlobalZoneProximityAction>
@@ -2250,7 +2480,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <System:Boolean>True</System:Boolean>
 </Enabled>
 <Owner>
-<Wherigo:WigoCartridge xsi:nil="true" ref="key26" />
+<Wherigo:WigoCartridge xsi:nil="true" ref="key30" />
 </Owner>
 </Actions:GlobalEventAction>
 </GlobalZoneActiveChangedAction>
@@ -2260,7 +2490,7 @@ Wherigo.ShowScreen(Wherigo.INVENTORYSCREEN)</System:String>
 <UserFunctions>
 <System:String>-- Library for Garmins to handle special characters and some bugs
 -- Copyright by Wherigo Foundation, Charlenni
--- Version 0.9.5
+-- Version 0.9.6
 
 -- HowTo
 --
@@ -2397,6 +2627,10 @@ Garmin.MessageBox = function (arg1, arg2, arg3, arg4)
   if arg1 ~= nil and type(arg1) == "table" then
     -- MessageBox call with table
     arg1.Text = Garmin.UTF8ToLatin(arg1.Text)
+    -- Cave! Garmins have only around 800 characters for MessageBoxes
+    if string.len(arg1.Text) &gt; 800 then
+      arg1.Text = string.sub(arg1.Text, 1, 796) .. " ..."
+    end
     if arg1.Buttons ~= nil and arg1.Buttons[1] ~= nil then
       arg1.Buttons[1] = Garmin.UTF8ToLatin(arg1.Buttons[1])
     end
@@ -2407,6 +2641,10 @@ Garmin.MessageBox = function (arg1, arg2, arg3, arg4)
   else
     -- MessageBox with discrete arguments
     arg1 = Garmin.UTF8ToLatin(arg1)
+    -- Cave! Garmins have only around 800 characters for MessageBoxes
+    if string.len(arg1) &gt; 800 then
+      arg1 = string.sub(arg1, 1, 796) .. " ..."
+    end
     if type(arg3) == "table" then
       arg3[1] = Garmin.UTF8ToLatin(arg3[1])
       arg3[2] = Garmin.UTF8ToLatin(arg3[2])
@@ -2420,6 +2658,10 @@ Garmin.Dialog = function (tbl)
   for k, v in ipairs(tbl) do
     if v.Text ~= nil then
       v.Text = Garmin.UTF8ToLatin(v.Text)
+      -- Cave! Garmins have only around 800 characters for Dialogs
+      if string.len(v.Text) &gt; 800 then
+        v.Text = string.sub(v.Text, 1, 796) .. " ..."
+      end
     end
   end
   Garmin.OrgDialog(tbl)
